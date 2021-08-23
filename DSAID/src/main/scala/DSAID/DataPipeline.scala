@@ -23,7 +23,7 @@ object DataPipeline {
           val spark=SparkSession.builder().getOrCreate()					
 					import spark.implicits._
 					
-					val df1 = spark.read.format("csv").option("header","true").load(".//data/dataset1.csv")
+					val df1 = spark.read.format("csv").option("header","true").load(".//data/")
 					
 					//Section 1
 					//Split the name field into first_name, and last_name & Delete any rows which do not have a name
